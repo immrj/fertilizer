@@ -1,0 +1,64 @@
+.title{
+  font-size: 36rpx;
+  font-weight: bold;
+  margin: 15rpx 0;
+}
+
+.ratio{
+  display: flex;
+  flex-flow: row nowrap;
+}
+
+.ratio text{
+  margin-right: 15rpx;
+  color: gray;
+}
+
+.net{
+  display: flex;
+  flex-flow: row nowrap;
+}
+
+.net text{
+  margin-right: 20rpx;
+  color: gray;
+}
+
+.net input {
+  max-width: 130rpx;
+  margin-right: 20rpx;
+}
+
+.calc{
+  margin: 30rpx 0;
+  width: 100% !important;
+}
+
+.result{
+  border: 1rpx solid lightgray;
+  padding: 30rpx;
+  border-radius: 8rpx;
+}
+
+.result .title{
+  margin-top: 0;
+  margin-bottom: 30rpx;
+}
+
+.item{
+  margin-top: 20rpx;
+}
+.item{
+  display: flex;
+  flex-flow: row nowrap;
+}
+
+.item view{
+  flex: 7
+}
+
+.item view:first-child{
+  text-align: right;
+  flex: 3;
+  color: gray;
+}

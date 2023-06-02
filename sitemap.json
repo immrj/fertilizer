@@ -1,0 +1,7 @@
+{
+  "desc": "化肥计算器",
+  "rules": [{
+  "action": "allow",
+  "page": "*"
+  }]
+}

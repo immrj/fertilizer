@@ -1,0 +1,69 @@
+<!--index.wxml-->
+<view class="container">
+  <view class="title">配方比例</view>
+  <view class="ratio">
+    <text>N:</text>
+    <input bindinput="valueChange" data-key="N_ratio" value="23" type="digit" placeholder="N含量"/>
+    <text>P:</text>
+    <input bindinput="valueChange" data-key="P_ratio" value="8" type="digit" placeholder="P含量"/>
+    <text>K:</text>
+    <input bindinput="valueChange" data-key="K_ratio" value="17" type="digit" placeholder="K含量"/>
+  </view>
+  <view class="title">总重量</view>
+  <input bindinput="valueChange" data-key="weight" value="1000" type="digit" placeholder="总重量"/>
+  <view class="title">尿素</view>
+  <view class="net">
+    <text>N含量</text>
+    <input bindinput="valueChange" data-key="CH4N2O_N_net" value="46" type="digit" placeholder="尿素N含量"/>
+    <text>%</text>
+  </view>
+  <view class="title">氯化铵</view>
+  <view class="net">
+    <text>N含量</text>
+    <input bindinput="valueChange" data-key="NH4CL_N_net" value="23" type="digit" placeholder="氯化铵N含量"/>
+    <text>%</text>
+  </view>
+  <view class="title">磷酸一铵</view>
+  <view class="net">
+    <text>N含量</text>
+    <input bindinput="valueChange" data-key="NH4H2PO4_N_net" value="11" type="digit" placeholder="磷酸一铵N含量"/>
+    <text>%</text>
+    <text>P₂O₅含量</text>
+    <input bindinput="valueChange" data-key="NH4H2PO4_P_net" value="44" type="digit" placeholder="磷酸一铵P₂O₅含量"/>
+    <text>%</text>
+  </view>
+  <view class="title">氯化钾</view>
+  <view class="net">
+    <text>K₂O含量</text>
+    <input bindinput="valueChange" data-key="KCL_K_net" value="60" type="digit" placeholder="氯化钾K₂O含量"/>
+    <text>%</text>
+  </view>
+  <button bindtap="calc" class="calc" type="primary">计算</button>
+  <view class="result" wx:if="{{showResult}}">
+    <view class="title">计算结果</view>
+    <view class="item">
+      <view>尿素：</view>
+      <view class="CH4N2O-res">{{CH4N2O_res}}</view>
+    </view>
+    <view class="item">
+      <view>氯化铵：</view>
+      <view class="NH4CL-res">{{NH4CL_res}}</view>
+    </view>
+    <view class="item">
+      <view>磷酸一铵：</view>
+      <view class="NH4H2PO4-res">{{NH4H2PO4_res}}</view>
+    </view>
+    <view class="item">
+      <view>氯化钾：</view>
+      <view class="KCL-res">{{KCL_res}}</view>
+    </view>
+    <view class="item">
+      <view>实际比例：</view>
+      <view class="finally-ratio">{{finallyRatio}}</view>
+    </view>
+    <view class="item">
+      <view>实际总养分：</view>
+      <view class="finally-total">{{finallyTotal}}</view>
+    </view>  
+  </view>
+</view>
